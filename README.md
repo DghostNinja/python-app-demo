@@ -1,6 +1,15 @@
 # python-app-demo 
 
 ---
+### Build (Recommended)
+
+```bash
+git clone https://github.com/DghostNinja/python-app-demo.git
+cd python-app-demo
+python3 app.py
+```
+
+OR
 
 ### ✅ 1. **Build the Docker Image Locally**
 
