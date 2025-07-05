@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block title %}Your Cart - FauxMart{% endblock %}
+{% block content %}
+<h2 class="text-3xl font-bold mb-6">🛒 Your Cart</h2>
+{% if items %}
+  <ul class="space-y-4">
+    {% for item in items %}
+      <li class="bg-white/10 p-4 rounded shadow flex justify-between items-center">
+        <div>
+          <h3 class="text-lg font-semibold">{{ item[1] }}</h3>
+          <p class="text-gray-300 text-sm">${{ item[3] }}</p>
+        </div>
+        <span class="text-sm bg-green-600 px-2 py-1 rounded">In Stock</span>
+      </li>
+    {% endfor %}
+  </ul>
+  <form method="POST" action="/checkout" class="mt-6 space-y-3">
+    <input name="card" placeholder="Fake Card Number" class="w-full p-3 rounded bg-white/10 text-white placeholder-gray-400" />
+    <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 rounded-lg shadow">💳 Complete Purchase</button>
+  </form>
+{% else %}
+  <p class="text-gray-300">Your cart is empty. <a href="/" class="underline text-purple-300">Browse products</a></p>
+{% endif %}
+{% endblock %}

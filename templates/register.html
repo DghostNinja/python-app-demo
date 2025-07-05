@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}Register - FauxMart{% endblock %}
+{% block content %}
+<div class="max-w-md mx-auto bg-white/5 p-8 rounded-xl shadow-xl backdrop-blur border border-white/10">
+  <h2 class="text-3xl font-bold mb-6">📝 Register</h2>
+  <form method="POST" class="space-y-4">
+    <input name="username" placeholder="Username" class="w-full p-3 rounded-lg bg-white/10 text-white placeholder-gray-400" />
+    <input type="password" name="password" placeholder="Password" class="w-full p-3 rounded-lg bg-white/10 text-white placeholder-gray-400" />
+    <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-lg shadow-md">Create Account</button>
+    <p class="text-sm text-gray-300 mt-2">Already have an account? <a href="/login" class="underline text-purple-300">Login here</a></p>
+  </form>
+</div>
+{% endblock %}
